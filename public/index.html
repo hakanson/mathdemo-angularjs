@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="math">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Math Demo</title>
+</head>
+<body>
+    <div>
+        <h1><a href="#/">Math Demo</a></h1>
+        <ul>
+            <li><a href="#/binary/add">Addition</a> (works as expected)</li>
+            <li><a href="#/binary/sub">Subtraction</a> (renders, but = does not work)</li>
+            <li><a href="#/binary/mul">Multiplication</a> (does not render correctly)</li>
+            <li><a href="#/binary/div">Division</a> (works as expected, try and divide by zero)</li>
+            <li><a href="#/unary/abs">Absolute</a> (local works as expected, try remote)</li>
+            <li><a href="#/unary/sqrt">Square Root</a> (works as expected, try sqrt of -1 )</li>
+            <br>
+            <li><a href="#/error">Error</a> (throws error )</li>
+            <li><a href="#/config">Config</a> </li>
+        </ul>
+    </div>
+
+    <div>
+        <hr>
+        <!-- Dynamic content -->
+        <ng-view></ng-view>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-resource.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.js"></script>
+
+    <script src="javascripts/fef-stub.js"></script>
+    <script src="javascripts/FefLog.js"></script>
+    <script src="javascripts/math.js"></script>
+</body>
+</html>
